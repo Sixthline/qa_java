@@ -42,6 +42,8 @@ __pycache__/
 static/
 posts/static/
 media/
+target/
+
 
 db.sqlite3
 
