@@ -1,26 +1,43 @@
 package com.example;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.junit.MockitoJUnitRunner;
 
-import static org.junit.Assert.*;
+import java.util.List;
 
+import static org.junit.Assert.assertEquals;
+
+@RunWith(MockitoJUnitRunner.class)
 public class CatTest {
 
-    @Before
-    public void setUp() throws Exception {
-    }
+    @Mock
+    Feline mockFeline;
 
-    @After
-    public void tearDown() throws Exception {
-    }
-
+    // Проверяем что метод "getSound()" возвращает строку "Мяу"
     @Test
-    public void getSound() {
+    public void getSoundReturnsCorrectValue() {
+        Cat cat = new Cat(mockFeline);
+        String expectedResult = "Мяу";
+        String actualResult = cat.getSound();
+        assertEquals(expectedResult, actualResult);
     }
 
+    // Проверяем что метод "getFood()" вызавает метод "eatMeat()"
     @Test
-    public void getFood() {
+    public void getFoodCallsEatMeat() throws Exception {
+        Cat cat = new Cat(mockFeline);
+        cat.getFood();
+        Mockito.verify(mockFeline).eatMeat();
     }
+
+    // Проверяем что метод "getFood()" возвращает список [Животные, Птицы, Рыба]
+//    @Test
+//    public void getFoodReturnsCorrectValue() throws Exception {
+//        Cat cat = new Cat(mockFeline);
+//        cat.getFood();
+//        Mockito.when(mockFeline.eatMeat()).thenReturn(List.of("Животные", "Птицы", "Рыба"));
+//    }
 }
