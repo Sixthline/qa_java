@@ -65,8 +65,8 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="com.example.FelineTest" name="getKittensWithKittensCountReturnsCorrectValue" time="0.001"/>
-  <testcase classname="com.example.FelineTest" name="getKittensCallsGetKittensWithCorrectValue" time="0"/>
+  <testcase classname="com.example.FelineTest" name="getKittensWithKittensCountReturnsCorrectValue" time="0"/>
+  <testcase classname="com.example.FelineTest" name="getKittensCallsGetKittensWithCorrectValue" time="0.001"/>
   <testcase classname="com.example.FelineTest" name="eatMeatCallsGetFoodWithCorrectValue" time="0"/>
   <testcase classname="com.example.FelineTest" name="getFamilyReturnsCorrectValue" time="0"/>
 </testsuite>

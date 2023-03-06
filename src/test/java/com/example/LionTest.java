@@ -19,7 +19,7 @@ public class LionTest {
     // Проверяем конструктор класса, сценарий с исключением
     @Test(expected = Exception.class)
     public void exceptionLionTest() throws Exception {
-        Lion lion = new Lion("амец", mockFeline);
+        lion = new Lion("амец", mockFeline);
     }
 
     // Проверяем что метод "getKittens()" вызавает метод "getKittens()" класса Feline
