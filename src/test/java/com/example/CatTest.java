@@ -32,12 +32,4 @@ public class CatTest {
         cat.getFood();
         Mockito.verify(mockFeline).eatMeat();
     }
-
-    // Проверяем что метод "getFood()" возвращает список [Животные, Птицы, Рыба]
-//    @Test
-//    public void getFoodReturnsCorrectValue() throws Exception {
-//        Cat cat = new Cat(mockFeline);
-//        cat.getFood();
-//        Mockito.when(mockFeline.eatMeat()).thenReturn(List.of("Животные", "Птицы", "Рыба"));
-//    }
 }
