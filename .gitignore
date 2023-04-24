@@ -19,5 +19,35 @@
 *.tar.gz
 *.rar
 
+.gitignore
+.idea/
+.DS_Store
+.git/*  
+env/
+venv/
+.venv
+.venv/
+.git/*
+
+__pycache__/
+*.py[cod]
+
+.idea
+.AppleDouble
+.LSOverride
+
+*.sublime-project
+*.sublime-workspace
+
+static/
+posts/static/
+media/
+target/
+
+
+db.sqlite3
+
+.vscode/
+
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
